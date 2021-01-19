@@ -2,52 +2,59 @@ package com.adri.ibmtest.service.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Proveedor {
 
-	private int idProveedor;
-	
-	private String nombre;
-	
-	private LocalDate fechaAlta;
-	
-	private Integer idCliente;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int idProveedor;
 
-	public Proveedor() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+    private String nombre;
 
-	public int getIdProveedor() {
-		return idProveedor;
-	}
+    private LocalDate fechaAlta;
 
-	public void setIdProveedor(int idProveedor) {
-		this.idProveedor = idProveedor;
-	}
+    private Integer idCliente;
 
-	public String getNombre() {
-		return nombre;
-	}
+    public Proveedor() {
+	super();
+	// TODO Auto-generated constructor stub
+    }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+    public int getIdProveedor() {
+	return idProveedor;
+    }
 
-	public LocalDate getFechaAlta() {
-		return fechaAlta;
-	}
+    public void setIdProveedor(int idProveedor) {
+	this.idProveedor = idProveedor;
+    }
 
-	public void setFechaAlta(LocalDate fechaAlta) {
-		this.fechaAlta = fechaAlta;
-	}
+    public String getNombre() {
+	return nombre;
+    }
 
-	public Integer getIdCliente() {
-		return idCliente;
-	}
+    public void setNombre(String nombre) {
+	this.nombre = nombre;
+    }
 
-	public void setIdCliente(Integer idCliente) {
-		this.idCliente = idCliente;
-	}
-	
-	
+    public LocalDate getFechaAlta() {
+	return fechaAlta;
+    }
+
+    public void setFechaAlta(LocalDate fechaAlta) {
+	this.fechaAlta = fechaAlta;
+    }
+
+    public Integer getIdCliente() {
+	return idCliente;
+    }
+
+    public void setIdCliente(Integer idCliente) {
+	this.idCliente = idCliente;
+    }
+
 }
