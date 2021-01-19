@@ -1,4 +1,4 @@
-package com.adri.ibmtest.model;
+package com.adri.ibmtest.service.model;
 
 import java.time.LocalDate;
 
