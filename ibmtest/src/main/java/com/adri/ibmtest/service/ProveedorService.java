@@ -1,9 +1,16 @@
 package com.adri.ibmtest.service;
 
+/**
+ * Clase para el procesamiento de datos de proveedores.
+ * 
+ * @author adri
+ *
+ */
 public interface ProveedorService {
     /**
+     * Genera un fichero con los proveedores asocieado al id del cliente.
      * 
-     * @param proveedorId
+     * @param clienteId: id del cliente a buscar
      */
-    void generateProveedoresFile(int proveedorId);
+    void generateProveedoresFile(int clienteId);
 }

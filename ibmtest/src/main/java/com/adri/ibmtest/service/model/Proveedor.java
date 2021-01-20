@@ -22,7 +22,6 @@ public class Proveedor {
 
     public Proveedor() {
 	super();
-	// TODO Auto-generated constructor stub
     }
 
     public int getIdProveedor() {

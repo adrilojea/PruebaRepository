@@ -6,7 +6,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.adri.ibmtest.service.model.Proveedor;
 
+/**
+ * Clase para la conexión de datos relacionado con proveedores.
+ * 
+ * @author adri
+ *
+ */
 public interface ProveedorRepository extends JpaRepository<Proveedor, Integer> {
     List<Proveedor> findByIdCliente(Integer idCliente);
-    // List<Proveedor> getProveedor(int idProveedor);
 }

@@ -28,6 +28,9 @@ public class ProveedorServiceImpl implements ProveedorService {
 	this.repository = repository;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void generateProveedoresFile(int clienteId) {
 	final List<Proveedor> proveedores = repository.findByIdCliente(clienteId);
@@ -40,16 +43,22 @@ public class ProveedorServiceImpl implements ProveedorService {
 
     }
 
+    /**
+     * Crea el fichero donde se guardaran los proveedores.
+     */
     private void createFile() {
 	if (Files.exists(Paths.get(FICHERO_PROVEEDORES))) {
 	    System.out.println("El fichero ya existe.");
 	} else {
 	    File myObj = new File(FICHERO_PROVEEDORES);
-	    System.out.println("File created: " + myObj.getName());
+	    System.out.println("Fichero creado: " + myObj.getName());
 	}
 
     }
 
+    /**
+     * Almacena en el fichero la lista de proveedores.
+     */
     private void writeProveedoresToFile(final List<Proveedor> proveedores) {
 	try {
 	    FileWriter fw = new FileWriter(FICHERO_PROVEEDORES);
